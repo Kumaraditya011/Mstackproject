@@ -1,0 +1,49 @@
+<app-dashnav></app-dashnav>
+<div class="wrapper bgded overlay" style="background-image:url('assets/images/samsung.jpg');">
+    <div class=" pb-xl-5 pb-lg-3">
+
+         <app-sidebar></app-sidebar>
+
+
+        <div class="row">
+            <div class="col-lg-5">
+
+            </div>
+
+
+
+
+            <div class="col-lg-5 mt-5 ml-5 container">
+
+                <div class="card border-success">
+                    <div class="card-header bg-success text-white">
+                        <h4>Post Blog</h4>
+                    </div>
+
+
+                    <form #sd="ngForm">
+                        <div class="card-body bg-dark text-white">
+
+                            <div class="form-group">
+                                <label>Post Title</label>
+                                <input class="form-control" ngModel name="title" required="">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Content</label>
+                                <input class="form-control" ngModel name="field" required="">
+                            </div>
+
+
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <button type="reset" (click)="sendData(sd)" class="btn btn-info">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

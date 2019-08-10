@@ -1,0 +1,107 @@
+<!-- contact -->
+
+<app-navigation></app-navigation>
+<!-- <div class="wrapper bgded overlay" style="background-image:url('assets/images/cover.jpg');">
+  <div class=" pb-xl-5 pb-lg-3">
+    <div class="row">
+      <div class="col-lg-4 mt-5">
+        <img src="assets/images/b2.png" alt="image" class="img-fluid" />
+      </div> -->
+
+
+<header class="intro-header ht" style="background-image: url('assets/images/header.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Contact Me</h1>
+          
+          <hr class="small">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+ <h1><p class="ml-5">Want to get in touch with me? <p></h1>
+   <h1><p class="ml-5">Fill out the form below to send me a message and I will try to get back to you
+    within 24 hours!</p>
+  </h1>
+
+
+<div class="row">
+  <div class="col-lg-5 mt-5 ml-5 mb-5">
+    <!-- contact form grid -->
+    <div class="contact-top1">
+      <form #cd="ngForm">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <label>
+                First name
+              </label>
+              <input class="form-control" type="text" placeholder="Anderson" ngModel name="FName" required="">
+            </div>
+            <div class="col-md-6 mt-md-0 mt-4">
+              <label>
+                Last name
+              </label>
+              <input class="form-control" type="text" placeholder="John" ngModel name="LName" required="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <label>
+                Mobile
+              </label>
+              <input class="form-control" type="text" placeholder="xxxx xxxx xx" ngModel name="mobile" required="">
+            </div>
+            <div class="col-md-6 mt-md-0 mt-4">
+              <label>
+                Email
+              </label>
+              <input class="form-control" type="email" placeholder="example@mail.com" ngModel name="email" required="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-12">
+              <label>
+                Your message
+              </label>
+              <textarea placeholder="Add your Description here" ngModel name="msg" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div>
+            <button type="reset" (click)="sendData(cd)" class="btn btn-info">SEND</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- //contact form grid ends here -->
+  </div>
+  <div class="col-md-4 mt-5 mb-3 ml-5">
+    <div>
+      <p>Address :</p>
+      <p>Hazratganj,Lucknow, Pin-226001</p>
+
+      <p>Phone :</p>
+      <p><a href="#">+91-8090524640</a></p>
+
+      <p>Email Address :</p>
+      <p><a href="#">kumar.aditya593@gmail.com</a></p>
+
+    </div>
+
+  </div>
+</div>
+<!-- </div>
+</div> -->
+<!-- //contact-->
+<app-footer></app-footer>

@@ -1,0 +1,69 @@
+<app-dashnav></app-dashnav>
+
+<app-sidebar></app-sidebar>
+
+<div class="mt-4 mb-5 row">
+    <div class="col-lg-3">
+
+    </div>
+
+    <div class="col-lg-8">
+        <h3 class="text-left hed"><u>Contact Messages</u></h3>
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover table-striped">
+
+                <thead>
+                    <tr>
+                        <th><b>Sno</b></th>
+                        <th><b>Name</b></th>
+                        <th><b>Message</b></th>
+                        <th><b>Email</b></th>
+                        <th><b>Action</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let k of conuser; index as i" ng-repeat="k in conuser|filter:s">
+                        <td scope="row">{{i+1}}</td>
+                        <td>{{k.FName + " " + k.LName }}</td>
+                        <td>{{k.msg}}</td>
+                        <td>{{k.email}}</td>
+                        <td class="text-left">
+
+                            <button (click)="codelete(k._id)" title="Delete" data-target="#cont" data-toggle="modal"
+                                class="btn btn-danger ml-1"><i class="pe-7s-close-circle"></i></button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="cont" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Record</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <i class="fa fa-warning text-danger"></i> Are you sure to delete this record
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button (click)="contactdelete()" type="button" class="btn btn-danger"
+                    data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

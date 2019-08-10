@@ -1,0 +1,65 @@
+<app-navigation></app-navigation>
+
+<!-- <div class="wrapper overlay" style="background-image:url('assets/images/register3.jpg');">
+    <div>
+        <h1 class="blog">connect with us</h1>
+        <h2 class="bl">Register Yourself..</h2>
+    </div>
+
+</div> -->
+
+<!-- <header class="intro-header overlay" style="background-image: url('assets/images/samsung.jpg')"> -->
+
+
+<!-- </header> -->
+
+<div class="row">
+    <div class="col-lg-6 mt-5">
+        <img src="assets/images/about.png" class="img-fluid">
+
+    </div>
+    <div class="col-lg-5 mt-3">
+        <div class="card ">
+            <div class="card-header bg-primary text-white">
+                <h4>Register</h4>
+            </div>
+
+
+            <form #ud="ngForm">
+                <div class="card-body  text-white">
+
+                    <div class="form-group">
+                        <label> Name</label>
+                        <input class="form-control" ngModel name="Name" required="">
+                    </div>
+                    <div class="form-group">
+
+                        <label>Email</label>
+                        <input class="form-control" ngModel name="Email" required="">
+                    </div>
+                    <div class="form-group">
+
+                        <label>Address</label>
+                        <input class="form-control" ngModel name="Address" required="">
+                    </div>
+                    <div class="form-group">
+
+                        <label>Password</label>
+                        <input type="password"class="form-control" ngModel name="Password" required="">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <button type="reset" (click)="sendData(ud)"
+                                class="btn btn-success btn btn-lg-block">Send</button>
+                        </div>
+                        <i class="mt-3 text-dark">Already have an account <a routerLink="/login"
+                                routerLinkActive="active">Login </a> here!</i>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

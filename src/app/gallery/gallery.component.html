@@ -1,0 +1,103 @@
+<app-navigation></app-navigation>
+<div class="wrapper overlay " style="background-image:url('assets/images/blog.jpg');">
+    <div>
+        <h1 class="blog">blog</h1>
+        <h2 class="bl">starting a new journey</h2>
+        <h4 class="al"><i>read our blogs and comment your views.</i></h4>
+    </div>
+
+</div>
+
+<div>
+    <label>
+        <h2 class=" ml-5 bm"><u><b>blog</b></u></h2>
+    </label>
+
+</div>
+<div>
+    <div class="col-lg-9" *ngFor="let k of snd; index as i">
+        <table class="table ml-3 table-bordered">
+            <thead>
+
+                <h1 class="pe-7s-star">{{k.title}}</h1>
+
+            </thead>
+
+            <tbody>
+                <p>{{date | date:'short'}} </p>
+                <p>{{k.field}}</p>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<!-- show comment-->
+<div>
+    <label>
+        <h2 class="ml-5"><u><b>comments</b></u></h2>
+    </label>
+
+</div>
+
+<div class="col-lg-5" *ngFor="let k of cmd; index as i">
+    <table class="table ml-3 table-bordered">
+        <thead>
+
+                <h4 class="pe-7s-user">{{k.nm}}</h4>
+            <p>{{date | date:'short'}} </p>
+
+
+        </thead>
+
+        <tbody>
+            <tr> </tr>
+            <p>{{k.cm}}</p>
+        </tbody>
+
+    </table>
+</div>
+
+<!--post comment-->
+<div class="row">
+    <div class="col-lg-6 ml-5">
+
+    </div>
+
+    <div class="col-lg-4 ml-5">
+        <h3><b><u>post comment</u></b></h3>
+        <form #cn="ngForm">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>
+                            Name
+                        </label>
+                        <input class="form-control" type="text" placeholder="Anderson" ngModel name="nm" required="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>
+                            Your Comment
+                        </label>
+                        <textarea placeholder="Add your Comment" ngModel name="cm" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 mb-5">
+                <div class="col-md-12">
+                    <button type="reset" (click)="sendData(cn)"
+                        class="btn btn-info btn-cont-w3 btn-block mt-4">COMMENT</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<app-footer></app-footer>

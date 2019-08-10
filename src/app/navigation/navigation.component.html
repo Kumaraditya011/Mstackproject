@@ -1,0 +1,37 @@
+<div>
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: darkcyan" >
+      <!-- <a routerLink="/home" routerLinkActive="active" class="navbar-brand"><img src="assets/images/shape3.png" alt=""></a> -->
+
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ml-auto mt-3 mt-lg-0" >
+        <li class="nav-item active">
+          <a class="text-white active ml-3" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="text-white ml-3" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+        </li>
+        <li class="nav-item active">
+            <a class="text-white ml-3" routerLink="/gallery" routerLinkActive="active">Posts</a>
+          </li>
+        <li class="nav-item active">
+          <a *ngIf="!authService.loggedIn()" class="text-white active ml-3" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item active">
+          <a *ngIf="!authService.loggedIn()" class="text-white active ml-3" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+
+<ul class="navbar-nav mr-auto mt-3 mt-lg-0">
+  <li class="nav-item active">
+    <a class="text-white active ml-3" style="cursor: pointer" *ngIf="authService.loggedIn()" (click)="authService.logoutUser()" >Logout</a>
+</li>
+
+</ul>
+
+      </ul>
+    </div>
+  </nav>
+</div>

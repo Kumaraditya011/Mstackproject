@@ -1,0 +1,168 @@
+<app-dashnav></app-dashnav>
+
+<app-sidebar></app-sidebar>
+
+<div class="row">
+    <div class="col-lg-3">
+
+    </div>
+
+    <div class="col-lg-5  ml-5 mt-4">
+            <div class="card-header" style="background-image: url('assets/images/tree.jpg')">
+                    <h2 class="text-center" style="font-family: 'Franklin Gothic Medium', 
+                    'Arial Narrow', Arial, sans-serif; font-size: 20; color: whitesmoke">My To Do List</h2>
+    
+            </div>
+    
+            <div class="card-body" style="background-image: url('assets/images/leaf.jpg')">
+    
+                <form #tn="ngForm">
+                    <input type="text" id="myInput" placeholder="Title..." class="text-dark" class="form-control" ngModel
+                        name="tox" required="">
+                    <button type="reset" (click)="sendData(tn)" class="btn btn-info btn-cont-w3 btn-block mt-4">Add</button>
+    
+    
+                </form>
+                <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+            </div>
+            <div class="col-lg-5 ml-5 container" class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th><b>Task</b></th>
+                            <th><b>Action</b></th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr *ngFor="let k of lis; index as i">
+                            <td>
+                                <h5>{{k.tox}}</h5>
+                            </td>
+                            <td class="text-left">
+                                <button (click)="modelete(k._id)" title="Delete" data-target="#tont" data-toggle="modal"
+                                    class="btn btn-danger ml-1"><i class="pe-7s-close-circle"></i></button>
+    
+                            </td>
+                        </tr>
+                        <!-- <ul id="myUL">
+                        </ul> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+    <div class="col-md-3 mt-5">
+        <div class="card card-user">
+            <div class="image">
+
+                <img src="assets/images/tree.jpg" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="author">
+                    <a href="#">
+                        <img class="avatar border-gray" src="assets/images/adi.jpg" alt="...">
+                        <h5 class="title"
+                            style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: orangered">
+                            Aditya Kumar Sahu</h5>
+                    </a>
+                    <div class="location mr-4"><i class="fa fa-map-marker"></i> Lucknow, Uttar Pradesh</div>
+                    <hr>
+                    <p class="description mt-3">
+                        Full Stack Developer
+                    </p>
+                </div>
+                <p class="description text-center">
+                    "Responsive web-developer
+                    <br> with a good knowledge
+                    <br> of backend programming"
+                </p>
+            </div>
+            <div class="card-footer">
+                <div class="card-text text-sm-center">
+                    <a href="#" class="ti ti-facebook  " style="font-size: 26px; color:blue"></a>
+                    <a href="#" class="ti ti-twitter-alt ml-4" style="font-size: 26px; color:aqua"></a>
+                    <a href="#" class="ti ti-linkedin ml-4" style="font-size: 26px; color:blue"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="col-lg-4">
+
+    </div>
+
+    <div class="col-lg-3  ml-5 container">
+        <div class="card-header" style="background-image: url('assets/images/tree.jpg')">
+                <h2 style="font-family: 'Franklin Gothic Medium', 
+                'Arial Narrow', Arial, sans-serif; font-size: 20; color: blue">My To Do List</h2>
+
+        </div>
+
+        <div class="card-body">
+
+            <form #tn="ngForm">
+                <input type="text" id="myInput" placeholder="Title..." class="text-dark" class="form-control" ngModel
+                    name="tox" required="">
+                <button type="reset" (click)="sendData(tn)" class="btn btn-info btn-cont-w3 btn-block mt-4">Add</button>
+
+
+            </form>
+        </div>
+        <div class="col-lg-5 ml-5 container" class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th><b>Task</b></th>
+                        <th><b>Action</b></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let k of lis; index as i">
+                        <td>
+                            <h5>{{k.tox}}</h5>
+                        </td>
+                        <td class="text-left">
+                            <button (click)="modelete(k._id)" title="Delete" data-target="#tont" data-toggle="modal"
+                                class="btn btn-danger ml-1"><i class="pe-7s-close-circle"></i></button>
+
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!--model-->
+
+<div class="modal fade" id="tont" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Record</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <i class="fa fa-warning text-danger"></i> Are you sure to delete this record
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button (click)="txtdelete()" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

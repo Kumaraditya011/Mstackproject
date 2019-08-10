@@ -1,0 +1,45 @@
+<app-navigation></app-navigation>
+<div class="row">
+  <div class="col-lg-5 mt-5">
+    <img src="assets/images/b1.png" class="img-fluid">
+
+  </div>
+  <div class="col-lg-4 mt-2 container">
+    <div class="card card-border-dark">
+      <div class="card-header bg-primary text-white">
+        <h2><b>SignIn</b></h2>
+      </div>
+      <form #lg="ngForm">
+        <div class="card-body text-dark">
+          <label>Email</label>
+          <input class="form-control" type="email">
+          <label>Password</label>
+          <input class="form-control" type="password" required pattern="^[a-zA-Z]\w{3,14}$" ngModel #p="ngModel"
+            [ngClass]="{'is-valid':p?.valid && p?.touched,
+               'is-invalid':!p?.valid && p?.touched}">
+          <small class="text-danger" *ngIf="p?.errors?.required && p?.touched"> Password is required here</small>
+          <small class="text-danger" *ngIf="p?.errors?.pattern && p?.touched"> Password must be between 3 to 15
+            characters</small>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <button (click)="login(lg)" type="reset" class="btn btn-success btn btn-lg-block ml-3">Login</button></div>
+          <i class="mt-3 ml-5">Don't have an account <a routerLink="/register" routerLinkActive="active">Register </a>
+            here!</i>
+
+        </div>
+      </form>
+      <!-- <div class="card-footer bg-dark text-white">
+            <input type="submit" value="Login" class="btn btn-success" style="margin-right: 16px">
+            <input type="submit" value="Forget Password" class="btn btn-danger">
+
+          </div> -->
+    </div>
+
+  </div>
+</div>
+
+
+<app-footer></app-footer>

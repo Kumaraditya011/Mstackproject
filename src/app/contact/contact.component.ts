@@ -8,7 +8,9 @@ import{HttpClient } from '@angular/common/http';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  private baseUrl = "http://localhost:3000";
+  private baseUrl = 'https://mstack2019.herokuapp.com'
+ 
+  // private baseUrl = "http://localhost:3000";
 
   constructor(private q: HttpClient) { }
 

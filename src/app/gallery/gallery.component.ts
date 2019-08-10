@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  private baseUrl = "http://localhost:3000";
+  private baseUrl = 'https://mstack2019.herokuapp.com'
+  //private baseUrl = "http://localhost:3000";
   snd: any = [];
   au: any = [];
   cmd: any = [];

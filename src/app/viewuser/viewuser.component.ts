@@ -9,7 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ViewuserComponent implements OnInit {
 
+  // private baseUrl = "http://localhost:3000";
   private baseUrl = "http://localhost:3000";
+
   alluser: any = [];
   uid: any;
   user: any = [];

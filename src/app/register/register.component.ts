@@ -11,7 +11,9 @@ import {Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  private baseUrl = "http://localhost:3000";
+  private baseUrl = 'https://mstack2019.herokuapp.com'
+
+  //  private baseUrl = "http://localhost:3000";
 
 
   constructor(private q: HttpClient, private tos:ToastrService,
